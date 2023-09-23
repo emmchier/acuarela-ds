@@ -1,5 +1,5 @@
-import { getNumberSize } from '../../helpers';
-import { IconProps } from '../../interfaces';
+import { getNumberSize } from '../helpers';
+import { IconProps } from '../interfaces';
 
 const Icon = ({ children, className = '', ariaLabel = '', size = 'sm' }: IconProps) => {
   const classes = () => {

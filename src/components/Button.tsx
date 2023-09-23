@@ -1,10 +1,10 @@
-import { getRadius, getSize, getVariant } from '../../helpers';
+import { getVariant, getSize, getRadius } from '../helpers';
 
-import { ButtonProps } from '../../interfaces';
-import { ProgressIcon } from '../icon/Icon';
+import { ButtonProps } from '../interfaces';
+import { ProgressIcon } from './Icon';
 
-import '../../styles/globals.css';
-import '../../styles/theme.css';
+import '../styles/globals.css';
+import '../styles/theme.css';
 import './button.css';
 
 /**
