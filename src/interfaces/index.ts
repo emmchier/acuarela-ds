@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ChangeEvent, FocusEvent, ReactNode } from 'react';
 
 export interface GlobalProps {
   /**
@@ -8,11 +8,11 @@ export interface GlobalProps {
   /**
    * The component ARIA label special for screen readers
    */
-  ariaLabel: string;
+  ariaLabel?: string;
   /**
    * The component content
    */
-  children: string | ReactNode | ReactNode[];
+  children?: string | ReactNode | ReactNode[];
   /**
    * The component size
    */
@@ -108,4 +108,153 @@ export interface ButtonProps extends GlobalProps {
    * Indicates if the button is in a loading state
    */
   loading?: boolean;
+}
+
+export interface InputProps extends GlobalProps {
+  /**
+   * The input type
+   */
+  type?: 'text' | 'number' | 'password' | 'submit' | 'reset' | 'email';
+  /**
+   * Indicates different input styled variants
+   */
+  variant?: 'contained' | 'outlined' | 'text' | 'underline' | 'shadow';
+  /**
+   * The input border radius
+   */
+  borderRadius?: 'sm' | 'md' | 'lg' | 'full' | 'none';
+  /**
+   * Indicates an specific input action with color and icon
+   * Action only shows if "resetButton" prop is setting to false
+   */
+  state?: 'default' | 'success' | 'error' | 'warning' | 'info';
+  /**
+   * The helper text aligment on the right or left
+   */
+  helperTextAlign?: 'start' | 'end';
+  /**
+   * Indicates the border color when input is in focus state
+   */
+  focusColor?: 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'info';
+  /**
+   * The asociated input label vital for screen readers
+   */
+  label: string;
+  /**
+   * The asociated input label className for additional CSS propieties
+   */
+  labelClassName?: string;
+  /**
+   * The input id
+   */
+  id?: number | string;
+  /**
+   * Gets an html input ref for different actions
+   */
+  ref?: any;
+  /**
+   * The input name important to form field references
+   */
+  name: string;
+  /**
+   * The input value for fill it
+   */
+  value?: number | string;
+  /**
+   * The input default value
+   */
+  defaultValue?: number | string;
+  /**
+   * Indicates the input field tematic
+   */
+  placeholder?: string;
+  /**
+   * The input maximum character length
+   */
+  maxLength?: number;
+  /**
+   * The input minimum character length
+   */
+  minLength?: number;
+  /**
+   * Indicates an specific character pattern to show the input content
+   */
+  pattern?: string;
+  /**
+   * The minimun number value admited
+   */
+  minValue?: number;
+  /**
+   * The maximum number value admited
+   */
+  maxValue?: number;
+  /**
+   * Indicates if input value is required to fill
+   */
+  required?: boolean;
+  /**
+   * Indicates if asociated input label is showing or not
+   */
+  hideLabel?: boolean;
+  /**
+   * Indicates if input is invalid to fill by read only state
+   */
+  readOnly?: boolean;
+  /**
+   * Indicates if input ready to fill in focus state
+   */
+  autoFocus?: boolean;
+  /**
+   * Action button for reset input values.
+   * Is setting by default.
+   */
+  resetButton?: boolean;
+  /**
+   * The input character counter
+   */
+  charCounter?: boolean;
+  /**
+   * Indicates the value from start counter
+   */
+  charCounterMin?: number;
+  /**
+   * Indicates the value from end counter
+   */
+  charCounterMax?: number;
+  /**
+   * A small text to show additional input information as errors and others
+   */
+  helperText?: string;
+  /**
+   * An html element at the beginning of input text
+   */
+  prefix?: string | number | ReactNode | ReactNode[];
+  /**
+   * Icon actions as buttons or read only
+   */
+  action?: string | number | ReactNode | ReactNode[];
+  /**
+   * The action icon ARIA label special for screen readers
+   */
+  ariaLabelAction?: string;
+  /**
+   * The action icon onClick handler function
+   */
+  onClickAction?: () => void;
+  /**
+   * The input submit handler function
+   */
+  onSubmit?: (event: any) => void;
+  /**
+   * The input onFocus handler function
+   */
+  onFocus?: (event: FocusEvent<HTMLInputElement>) => void;
+  /**
+   * The input onChange handler function
+   */
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  /**
+   * The input onBlur handler function
+   */
+  onBlur?: (event: ChangeEvent<HTMLInputElement>) => void;
 }

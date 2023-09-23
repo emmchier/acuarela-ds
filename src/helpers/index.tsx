@@ -1,3 +1,10 @@
+import {
+  CancelCircleIcon,
+  CheckCircleIcon,
+  InfoCircleIcon,
+  WarningCircleIcon,
+} from '../components/Icon';
+
 export const getVariant = (variant: string) => {
   if (variant === 'contained') return 'contained';
   if (variant === 'outlined') return 'outlined';
@@ -43,6 +50,15 @@ export const getStateColor = (state: any) => {
   if (state === 'error') return '#e30918';
   if (state === 'info') return '#0985e3';
   if (state === 'warning') return '#ff8400';
+
+  return '';
+};
+
+export const getIconActionByState = (state: string) => {
+  if (state === 'success') return <CheckCircleIcon color="#04c3b6" />;
+  if (state === 'error') return <CancelCircleIcon color="#e30918" />;
+  if (state === 'info') return <InfoCircleIcon color="#0985e3" />;
+  if (state === 'warning') return <WarningCircleIcon color="#ff8400" />;
 
   return '';
 };

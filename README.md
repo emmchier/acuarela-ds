@@ -3,7 +3,7 @@
 An ultra-lightweight component library for React applications.
 We only have a Button component, for now, but stay tuned as we'll keep adding more.
 
-## Table of Contents
+<!-- ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -135,11 +135,9 @@ function MyComponent() {
 }
 
 export default MyComponent;
-```
+``` -->
 
-### SEE DEMO
-
-[Storybook](https://emmchier.github.io/acuarela-ds/?path=/story/button--outlined)
+### [DEMOS](https://emmchier.github.io/acuarela-ds/?path=/docs/button--docs&globals=backgrounds.grid:!false)
 
 ## License
 
