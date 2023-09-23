@@ -1,0 +1,145 @@
+html,
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Border radius */
+
+.acButton.radiusSm,
+.acInput.radiusSm {
+  border-radius: var(--size-4);
+}
+
+.acButton.radiusMd,
+.acInput.radiusMd {
+  border-radius: var(--size-8);
+}
+
+.acButton.radiusLg,
+.acInput.radiusLg {
+  border-radius: var(--size-16);
+}
+
+.acButton.radiusFull,
+.acInput.radiusFull {
+  border-radius: var(--size-40);
+}
+
+.acButton.radiusNone,
+.acInput.radiusNone {
+  border-radius: 0;
+}
+
+/* Elevation */
+
+.acButton.elevation1,
+.acInput.elevation1 {
+  box-shadow: var(--elevation-1);
+}
+
+.acButton.elevation2,
+.acInput.elevation2 {
+  box-shadow: var(--elevation-2);
+}
+
+.acButton.elevation3,
+.acInput.elevation3 {
+  box-shadow: var(--elevation-3);
+}
+
+.acButton.elevation4,
+.acInput.elevation4 {
+  box-shadow: var(--elevation-4);
+}
+
+.acButton.elevation5,
+.acInput.elevation5 {
+  box-shadow: var(--elevation-5);
+}
+
+.acButton.elevation6,
+.acInput.elevation6 {
+  box-shadow: var(--elevation-6);
+}
+
+.acButton.elevationNone,
+.acInput.elevationNone {
+  box-shadow: none;
+}
+
+/* Variants */
+
+.acButton.noVariant,
+.acInput.noVariant {
+  color: inherit;
+  background-color: inherit;
+  border: inherit;
+  box-shadow: inherit;
+  text-decoration: inherit;
+}
+
+/* Disabled */
+
+.acButton.disabled svg,
+.acInput.disabled svg {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(7%) hue-rotate(357deg)
+    brightness(95%) contrast(83%);
+}
+
+/* Figure */
+
+.acButton figure,
+.acInput figure {
+  display: inline;
+  width: auto;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* svg size */
+
+.acButton.sizeSm svg,
+.acInput.sizeSm svg {
+  width: var(--size-20);
+  height: var(--size-20);
+}
+
+.acButton.sizeMd svg,
+.acInput.sizeMd svg {
+  width: var(--size-24);
+  height: var(--size-24);
+}
+
+.acButton.sizeLg svg,
+.acInput.sizeLg svg {
+  width: var(--size-28);
+  height: var(--size-28);
+}
