@@ -8,11 +8,11 @@ export interface GlobalProps {
   /**
    * The component ARIA label special for screen readers
    */
-  ariaLabel?: string;
+  ariaLabel: string;
   /**
    * The component content
    */
-  children?: ReactNode | ReactNode[];
+  children: string | ReactNode | ReactNode[];
   /**
    * The component size
    */

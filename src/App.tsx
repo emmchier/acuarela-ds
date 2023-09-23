@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <h1>Acuarela DS</h1>
-      <Button>Hola</Button>
+      <Button ariaLabel="outlined">Hola</Button>
     </>
   );
 }

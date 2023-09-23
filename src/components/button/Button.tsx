@@ -1,8 +1,10 @@
 import { getRadius, getSize, getVariant } from '../../helpers';
+
 import { ButtonProps } from '../../interfaces';
+import { ProgressIcon } from '../icon/Icon';
+
 import '../../styles/globals.css';
 import '../../styles/theme.css';
-import { ProgressIcon } from '../icon/Icon';
 import './button.css';
 
 /**
@@ -20,14 +22,14 @@ import './button.css';
  * @property {number} [tabIndex=0] - Value of the 'tabIndex' attribute.
  * @property {string} [ariaLabel=''] - Descriptive text for accessibility.
  * @property {number} [elevation=0] - Button elevation level.
- * @property {string} [textColor=''] - Text color of the button.
- * @property {string} [bgColor=''] - Background color of the button.
- * @property {number} [borderSize=null] - Button border size.
+ * @property {string} [textColor=undefined] - Text color of the button.
+ * @property {string} [bgColor=undefined] - Background color of the button.
+ * @property {number} [borderSize=undefined] - Button border size.
  * @property {string} [size='md'] - Button size ('sm', 'md', 'lg').
  * @property {string} [borderColor=''] - Button border color.
  * @property {string} [borderRadius='sm'] - Button border radius ('sm', 'md', 'lg', 'xl', 'full').
  * @property {string} [className=''] - Additional CSS classes for the button.
- * @property {Object} [style] - Additional inline CSS styles for the button.
+ * @property {Object} [style=undefined] - Additional inline CSS styles for the button.
  * @property {boolean} [disabled=false] - Indicates whether the button is disabled.
  * @property {function} [onClick] - Event handler for button click.
  * @property {function} [onMouseEnter] - Event handler for mouse enter.
@@ -56,22 +58,22 @@ import './button.css';
 export const Button = ({
   type = 'button',
   variant = 'contained',
-  iconLeft = '',
-  iconRight = '',
+  iconLeft = null,
+  iconRight = null,
   iconButton = false,
   loading = false,
-  children = '',
+  children,
   tabIndex = 0,
-  ariaLabel = '',
+  ariaLabel,
   elevation = 0,
-  textColor = '',
-  bgColor = '',
+  textColor = undefined,
+  bgColor = undefined,
   borderSize = undefined,
   size = 'md',
   borderColor = '',
   borderRadius = 'sm',
   className = '',
-  style: additionalStyles,
+  style: additionalStyles = undefined,
   disabled = false,
   onClick = () => {},
   onMouseEnter = () => {},
